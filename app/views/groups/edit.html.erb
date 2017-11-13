@@ -1,0 +1,12 @@
+<h1>Edit page</h1>
+
+<%= form_for(@group) do |f| %>
+
+<% if @group.errors.any? %>
+	<h4>Error</h4>
+<% end %>
+
+Title:<%= f.text_field :title %><br/>
+Content:<%= f.text_field :content %><br/>
+<%= f.submit 'save' %>
+<% end %>
